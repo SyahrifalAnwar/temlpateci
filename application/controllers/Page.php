@@ -5,6 +5,13 @@ class Page extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('page');
+		$data = array(
+			'isi' => 'page');
+		$this->load->view('base', $data);
+	}
+
+	public function login($value='')
+	{
+		$this->load->view('login');
 	}
 }
